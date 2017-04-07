@@ -1,12 +1,12 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TeamComponent } from './team/team.component';
+import { PlayersComponent } from './players/players.component';
 import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: TeamComponent
+    component: PlayersComponent
   } ,
   {
     path: 'about',

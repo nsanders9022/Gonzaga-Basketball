@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { AppComponent } from './app.component';
-import { TeamComponent } from './team/team.component';
+import { PlayersComponent } from './players/players.component';
 import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TeamComponent,
+    PlayersComponent,
     AboutComponent
   ],
   imports: [
