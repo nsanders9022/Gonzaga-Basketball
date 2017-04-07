@@ -12,11 +12,16 @@ import { Router } from '@angular/router';
 })
 export class PlayersComponent implements OnInit {
   players: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private playersService: PlayersService) { }
 
   ngOnInit() {
     this.players = this.playersService.getPlayers();
+  }
+
+  goToPlayerDetailPage(clickedPlayer) {
+    this.router.navigate(['players', clickedPlayer.$key])
   }
 
 }
