@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="currentRoute !=='/admin'">
   <select (change)="onChange($event.target.value)">
     <option value="allPositions" selected="selected">All Positions</option>
     <option value="guard">Guards</option>
@@ -16,6 +16,11 @@
     <div class="col-sm-6">
       <h3 (click)="goToPlayerDetailPage(player)">{{player.name}}</h3>
       <h4>{{player.position}}</h4>
+    </div>
+    <div *ngIf="currentRoute === '/admin'">
+      {{player.details}}
+      <hr>
+      <app-edit-players></app-edit-players>
     </div>
   </div>
 </div>
