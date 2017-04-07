@@ -10,17 +10,20 @@
 
 <div *ngFor="let player of players | async | playerPosition:filterByPlayerPosition">
   <div class="row">
-    <div class="col-sm-6">
+    <!-- <div class="col-sm-6">
       <img src={{player.image}} alt="">
-    </div>
+    </div> -->
     <div class="col-sm-6">
       <h3 (click)="goToPlayerDetailPage(player)">{{player.name}}</h3>
       <h4>{{player.position}}</h4>
     </div>
     <div *ngIf="currentRoute === '/admin'">
       {{player.details}}
+      {{player.height}}
+      {{player.year}}
+      {{player.number}}
       <hr>
-      <app-edit-players></app-edit-players>
+      <app-edit-players [selectedPlayer]="player"></app-edit-players>
     </div>
   </div>
 </div>

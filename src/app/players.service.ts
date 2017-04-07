@@ -22,4 +22,16 @@ export class PlayersService {
   addPlayer(newPlayer: Players) {
     this.players.push(newPlayer);
   }
+
+  updatePlayer(localUpdatedPlayer) {
+    var playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
+    playerEntryInFirebase.update({name: localUpdatedPlayer.name,
+                                  position: localUpdatedPlayer.position,
+                                  number: localUpdatedPlayer.number,
+                                  height: localUpdatedPlayer.height,
+                                  year: localUpdatedPlayer.year,
+                                  image: localUpdatedPlayer.image,
+                                  details: localUpdatedPlayer.details
+                                })
+  }
 }
