@@ -46,7 +46,7 @@
         <textarea #newDetails class="form-control"></textarea>
       </div>
 
-      <button class="btn btn-primary" (click)="submitForm(newName.value, newPosition.value, newNumber.value, newHeight.value, newYear.value, newImage.value, newDetails.value)">Add Player</button>
+      <button class="btn btn-primary" (click)="submitForm(newName.value, newPosition.value, newNumber.value, newHeight.value, newYear.value, newImage.value, newDetails.value); newName.value=''; newPosition.value=''; newNumber.value=''; newHeight.value=''; newYear.value=''; newImage.value=''; newDetails.value=''">Add Player</button>
     </div>
   </div>
 </div>

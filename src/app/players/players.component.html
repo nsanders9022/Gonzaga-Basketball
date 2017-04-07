@@ -12,14 +12,13 @@
   </select>
 </div>
 
-<h3>Players:</h3>
+<h2>Players:</h2>
 <div *ngFor="let player of players | async | playerPosition:filterByPlayerPosition">
   <h3 (click)="goToPlayerDetailPage(player)">
     <span class="index-number">{{player.number}}</span>
     <span class="index-name">{{player.name}}</span>
   </h3>
-  <h4><span class="index-position">{{player.position}}</span>
-</h4>
+  <h4><span class="index-position">{{player.position}}</span></h4>
 
   <div *ngIf="currentRoute === '/admin'">
     {{player.details}}

@@ -1,3 +1,7 @@
+<br>
+<button class="btn btn-danger" (click)="beginDeletingPlayer(selectedPlayer)">Delete Player</button>
+<br>
+<br>
 <div class="panel panel-default new-form">
   <div class="panel-heading">
     <h4>Edit Player Information</h4>
@@ -44,9 +48,7 @@
       <br>
       <input [(ngModel)]="selectedPlayer.details" class="form-control">
     </div>
-    <button class="btn btn-success" (click)="beginUpdatingPlayer(selectedPlayer)">Edit Player</button>
+    <br>
+    <button class="btn btn-primary" (click)="beginUpdatingPlayer(selectedPlayer)">Edit Player</button>
   </div>
 </div>
-  <br>
-  <br>
-  <button class="btn btn-danger" (click)="beginDeletingPlayer(selectedPlayer)">Delete Player</button>
