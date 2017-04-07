@@ -1,2 +1,34 @@
 <h2>{{(playerToDisplay | async)?.name}}</h2>
-<p>{{(playerToDisplay | async)?.details}}</p>
+<div class="row">
+  <div class="col-sm-3">
+    <img class="detail-image" src="{{(playerToDisplay | async)?.image}}" alt="">
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>{{(playerToDisplay | async)?.details}}</p>
+      </div>
+    </div>
+    <div class="row detail-row">
+      <div class="col-sm-3">
+        <p><strong>Number:</strong> {{(playerToDisplay | async)?.number}}</p>
+      </div>
+      <div class="col-sm-3">
+        <p><strong>Height:</strong> {{(playerToDisplay | async)?.height}} feet</p>
+      </div>
+      <div class="col-sm-3">
+        <p><strong>Position:</strong> {{(playerToDisplay | async)?.position}}</p>
+      </div>
+      <div class="col-sm-3">
+        <p><strong>Year:</strong> {{(playerToDisplay | async)?.year}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text">
+        <p><em>Text from the Official Gonzaga Mens Basketball Website</em></p>
+
+      </div>
+
+    </div>
+  </div>
+</div>

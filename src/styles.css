@@ -1,15 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+/*.body {
+  background-color: #d2d2d2;
+}*/
+
 .banner {
-  height: 200px;
-  background-image: url("https://www.gonzaga.edu/Campus-Resources/Offices-and-Services-A-Z/MarketingandCommunications/img/logos/Logotype_rgb_3clr_whtbkgd_hi-res.jpg");
+  height: 150px;
+  background-image: url("http://content.sportslogos.net/logos/31/691/full/3784_gonzaga_bulldogs-wordmark-1998.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  padding-bottom: 300px;
 }
-
-
 
 #nav-image {
   height: 50px;
@@ -32,9 +33,10 @@
 }
 
 #index-image {
-  width: 100%auto;
+  width: 100%;
   height: auto;
   align-items: center;
+  margin-top: 50px;
 }
 
 .index-position {
@@ -47,4 +49,20 @@
 
 .index-name {
   color: #1b3975;
+}
+
+.detail-image {
+  max-width: 200px;
+}
+
+.detail-row {
+  margin-top: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.text {
+  margin-top: 100px;
 }
