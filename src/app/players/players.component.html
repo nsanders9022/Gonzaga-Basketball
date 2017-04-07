@@ -1,4 +1,14 @@
-<div *ngFor="let player of players | async">
+<div>
+  <select (change)="onChange($event.target.value)">
+    <option value="allPositions" selected="selected">All Positions</option>
+    <option value="guard">Guards</option>
+    <option value="center">Centers</option>
+    <option value="forward">Forwards</option>
+  </select>
+</div>
+
+
+<div *ngFor="let player of players | async | playerPosition:filterByPlayerPosition">
   <div class="row">
     <div class="col-sm-6">
       <img src={{player.image}} alt="">
