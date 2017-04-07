@@ -19,4 +19,7 @@ export class PlayersService {
     return this.angularFire.database.object('players/' + playerId);
   }
 
+  addPlayer(newPlayer: Players) {
+    this.players.push(newPlayer);
+  }
 }

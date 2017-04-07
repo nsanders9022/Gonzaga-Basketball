@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Player to the Team</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Player Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Player Position:</label>
+        <br>
+        <input #newPosition>
+      </div>
+
+      <div>
+        <label>Player Number:</label>
+        <br>
+        <input #newNumber>
+      </div>
+
+      <div>
+        <label>Player Height:</label>
+        <br>
+        <input #newHeight>
+      </div>
+
+      <div>
+        <label>Player Year:</label>
+        <br>
+        <input #newYear>
+      </div>
+
+      <div>
+        <label>Player Image URL:</label>
+        <br>
+        <input #newImage>
+      </div>
+
+      <div>
+        <label>Player Details:</label>
+        <br>
+        <textarea #newDetails></textarea>
+      </div>
+      <button class="btn btn-success" (click)="submitForm(newName.value, newPosition.value, newNumber.value, newHeight.value, newYear.value, newImage.value, newDetails.value)">Add Player</button>
+    </div>
+  </div>
+</div>
