@@ -1,29 +1,31 @@
-<div *ngIf="currentRoute !=='/admin'">
-  <select (change)="onChange($event.target.value)">
-    <option value="allPositions" selected="selected">All Positions</option>
-    <option value="guard">Guards</option>
-    <option value="center">Centers</option>
-    <option value="forward">Forwards</option>
-  </select>
+<div>
+  <img id="index-image" src="http://img.scout.com/sites/default/files/2017/03/23/Expert%20Picks.jpg?w=970&h=371&fit=crop&rect=0,0,1279,489" alt="">
 </div>
 
-
-<div *ngFor="let player of players | async | playerPosition:filterByPlayerPosition">
-  <div class="row">
-    <!-- <div class="col-sm-6">
-      <img src={{player.image}} alt="">
-    </div> -->
-    <div class="col-sm-6">
-      <h3 (click)="goToPlayerDetailPage(player)">{{player.name}}</h3>
-      <h4>{{player.position}}</h4>
+<div class="row">
+  <div class="col-sm-6">
+    <h3>Players:</h3>
+    <div *ngFor="let player of players | async | playerPosition:filterByPlayerPosition">
+        <h3 (click)="goToPlayerDetailPage(player)"><span class="index-number">{{player.number}}</span> <span class="index-name">{{player.name}}</span></h3>
+        <h4><span class="index-position">{{player.position}}</span></h4>
+      <div *ngIf="currentRoute === '/admin'">
+        {{player.details}}
+        {{player.height}}
+        {{player.year}}
+        <hr>
+        <app-edit-players [selectedPlayer]="player">Loading...</app-edit-players>
+      </div>
     </div>
-    <div *ngIf="currentRoute === '/admin'">
-      {{player.details}}
-      {{player.height}}
-      {{player.year}}
-      {{player.number}}
-      <hr>
-      <app-edit-players [selectedPlayer]="player">Loading...</app-edit-players>
+  </div>
+  <div class="col-sm-6">
+    <div *ngIf="currentRoute !=='/admin'">
+      <h3>Search for players by position</h3>
+      <select (change)="onChange($event.target.value)">
+        <option value="allPositions" selected="selected">All Positions</option>
+        <option value="guard">Guards</option>
+        <option value="center">Centers</option>
+        <option value="forward">Forwards</option>
+      </select>
     </div>
   </div>
 </div>

@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+.banner {
+  height: 200px;
+  background-image: url("https://www.gonzaga.edu/Campus-Resources/Offices-and-Services-A-Z/MarketingandCommunications/img/logos/Logotype_rgb_3clr_whtbkgd_hi-res.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 300px;
+}
+
+
+
+#nav-image {
+  height: 50px;
+  float: left;
+  margin-top: -13px;
+  padding-right: 10px;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -11,4 +29,22 @@
 
 .container {
   margin-bottom: 100px;
+}
+
+#index-image {
+  width: 100%auto;
+  height: auto;
+  align-items: center;
+}
+
+.index-position {
+  padding-left: 30px;
+}
+
+.index-number {
+  color: #c32c3f;
+}
+
+.index-name {
+  color: #1b3975;
 }
