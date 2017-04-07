@@ -20,4 +20,10 @@ export class EditPlayersComponent implements OnInit {
     this.playersService.updatePlayer(playerToUpdate);
   }
 
+  beginDeletingPlayer(playerToDelete) {
+    if(confirm("Are you sure you want to delete this player from the team?")) {
+      this.playersService.deletePlayer(playerToDelete);
+    }
+  }
+
 }
