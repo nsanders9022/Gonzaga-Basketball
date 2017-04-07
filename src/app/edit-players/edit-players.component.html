@@ -1,47 +1,52 @@
-<h4>Edit Player Information</h4>
-<div>
-  <div>
-    <label>New Player Name:</label>
-    <br>
-    <input [(ngModel)]="selectedPlayer.name">
+<div class="panel panel-default new-form">
+  <div class="panel-heading">
+    <h4>Edit Player Information</h4>
   </div>
+  <div class="panel-body">
+    <div>
+      <label>New Player Name:</label>
+      <br>
+      <input [(ngModel)]="selectedPlayer.name" class="form-control">
+    </div>
 
-  <div>
-    <label>New Player Position:</label>
-    <br>
-    <input [(ngModel)]="selectedPlayer.position">
-  </div>
+    <div>
+      <label>New Player Position:</label>
+      <br>
+      <input [(ngModel)]="selectedPlayer.position" class="form-control">
+    </div>
 
-  <div>
-    <label>New Player Number:</label>
-    <br>
-    <input [(ngModel)]="selectedPlayer.number">
-  </div>
+    <div>
+      <label>New Player Number:</label>
+      <br>
+      <input [(ngModel)]="selectedPlayer.number" class="form-control">
+    </div>
 
-  <div>
-    <label>New Player Height:</label>
-    <br>
-    <input [(ngModel)]="selectedPlayer.height">
-  </div>
+    <div>
+      <label>New Player Height:</label>
+      <br>
+      <input [(ngModel)]="selectedPlayer.height" class="form-control">
+    </div>
 
-  <div>
-    <label>New Player Year:</label>
-    <br>
-    <input [(ngModel)]="selectedPlayer.year">
-  </div>
+    <div>
+      <label>New Player Year:</label>
+      <br>
+      <input [(ngModel)]="selectedPlayer.year" class="form-control">
+    </div>
 
-  <div>
-    <label>New Player Image URL:</label>
-    <br>
-    <input [(ngModel)]="selectedPlayer.image">
-  </div>
+    <div>
+      <label>New Player Image URL:</label>
+      <br>
+      <input [(ngModel)]="selectedPlayer.image" class="form-control">
+    </div>
 
-  <div>
-    <label>New Player Details:</label>
-    <br>
-    <input [(ngModel)]="selectedPlayer.details">
+    <div>
+      <label>New Player Details:</label>
+      <br>
+      <input [(ngModel)]="selectedPlayer.details" class="form-control">
+    </div>
+    <button class="btn btn-success" (click)="beginUpdatingPlayer(selectedPlayer)">Edit Player</button>
   </div>
-  <button class="btn btn-success" (click)="beginUpdatingPlayer(selectedPlayer)">Edit Player</button>
-  <hr>
-  <button class="btn btn-danger" (click)="beginDeletingPlayer(selectedPlayer)">Delete Player</button>
 </div>
+  <br>
+  <br>
+  <button class="btn btn-danger" (click)="beginDeletingPlayer(selectedPlayer)">Delete Player</button>

@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default new-form">
   <div class="panel-heading">
     <h3 class="panel-title">Add a New Player to the Team</h3>
   </div>
@@ -7,46 +7,46 @@
       <div>
         <label>Player Name:</label>
         <br>
-        <input #newName>
+        <input #newName class="form-control">
       </div>
 
       <div>
         <label>Player Position:</label>
         <br>
-        <input #newPosition>
+        <input #newPosition class="form-control">
       </div>
 
       <div>
         <label>Player Number:</label>
         <br>
-        <input #newNumber>
+        <input #newNumber class="form-control">
       </div>
 
       <div>
         <label>Player Height:</label>
         <br>
-        <input #newHeight>
+        <input #newHeight class="form-control">
       </div>
 
       <div>
         <label>Player Year:</label>
         <br>
-        <input #newYear>
+        <input #newYear class="form-control">
       </div>
 
       <div>
         <label>Player Image URL:</label>
         <br>
-        <input #newImage>
+        <input #newImage class="form-control">
       </div>
 
       <div>
         <label>Player Details:</label>
         <br>
-        <textarea #newDetails></textarea>
+        <textarea #newDetails class="form-control"></textarea>
       </div>
-      
-      <button class="btn btn-success" (click)="submitForm(newName.value, newPosition.value, newNumber.value, newHeight.value, newYear.value, newImage.value, newDetails.value)">Add Player</button>
+
+      <button class="btn btn-primary" (click)="submitForm(newName.value, newPosition.value, newNumber.value, newHeight.value, newYear.value, newImage.value, newDetails.value)">Add Player</button>
     </div>
   </div>
 </div>

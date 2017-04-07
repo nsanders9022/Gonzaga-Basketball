@@ -5,11 +5,12 @@
 }*/
 
 .banner {
-  height: 150px;
+  height: 100px;
   background-image: url("http://content.sportslogos.net/logos/31/691/full/3784_gonzaga_bulldogs-wordmark-1998.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  margin-bottom: 30px;
 }
 
 #nav-image {
@@ -36,11 +37,10 @@
   width: 100%;
   height: auto;
   align-items: center;
-  margin-top: 50px;
 }
 
 .index-position {
-  padding-left: 30px;
+  font-style: italic;
 }
 
 .index-number {
@@ -65,4 +65,9 @@ h2 {
 
 .text {
   margin-top: 100px;
+}
+
+.new-form {
+  width: 80%;
+  margin: 0 auto;
 }
